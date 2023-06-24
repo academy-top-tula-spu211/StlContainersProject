@@ -2,9 +2,9 @@
 #include <vector>
 #include <list>
 #include <typeinfo>
+#include <map>
 
 using namespace std;
-
 template <typename T1, typename T2>
 auto Sum(T1 a, T2 b)
 {
@@ -102,4 +102,13 @@ int main()
     Funct f;
     std::cout << f(10, 20) << "\n";
     */
+
+    map<string, string> dict;
+    dict.insert(pair("name", "Bob"));
+    dict.insert(pair("age", "32"));
+    dict.insert(pair("name", "Leo"));
+    dict["name"] = "Leo";
+
+    for (auto item : dict)
+        cout << item.first << " -> " << item.second << "\n";
 }
